@@ -1,8 +1,4 @@
-<<<<<<< HEAD
     OBJECTS = loader.o kmain.o io.o gdt.o memory_seg.o 
-=======
-    OBJECTS = loader.o kmain.o io.o
->>>>>>> f24e30170b336bb306a8b08dbfc0e4e3cabc7765
     CC = gcc
     CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
              -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -c
