@@ -12,4 +12,4 @@
     fb_write(ptr2, 13);
     segments_install_gdt();
 
-    }
+}
