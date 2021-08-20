@@ -1,15 +1,21 @@
-#include "frame_buffer.h"
-#include "serial_port.h"
-#include "memory_seg.h"
+    #include "drivers/frame_buffer.h"
+    #include "drivers/serial_port.h"
+    #include "drivers/io.h"
+    #include "segmentation/segments.h"
+    #include "interrupts/interrupts.h"
+    #include "interrupts/keyboard.h"
+    #include "interrupts/pic.h"
+    
 
+    void kmain()
+    {
 
-    int main(){
+       //char arr[] = "Welcome to YmeOS";
+       //fb_move_cursor(6*80);
+       //fb_write(arr, 20);
+       //serial_write(arr, 20);
+       segments_install_gdt();
+       interrupts_install_idt();
 
-           char ptr2[] = "welcome YmeOS";
+    }
 
-
-    serial_write(0x3F8, ptr2, 13);
-    fb_write(ptr2, 13);
-    segments_install_gdt();
-
-}
