@@ -10,7 +10,7 @@
     void kmain()
     {
 
-       //char arr[] = "Welcome to fifthOS";
+       //char arr[] = "Welcome to YmeOS";
        //fb_move_cursor(6*80);
        //fb_write(arr, 20);
        //serial_write(arr, 20);
