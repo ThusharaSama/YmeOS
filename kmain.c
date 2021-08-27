@@ -5,7 +5,6 @@
 #include "interrupts/interrupts.h"
 #include "user_mode/start_program.h"
 
-
 /*function to intialize interrupts and segments*/
 void init_segments_interrupts(){
 	segments_install_gdt();
@@ -21,3 +20,4 @@ void kmain(unsigned int ebx){
 
 
 }
+

@@ -2,6 +2,7 @@
 #define INCLUDE_PIC_H
 
 /*                      I/O port */
+
 #define PIC_1		0x20		/* IO base address for master PIC */
 #define PIC_2		0xA0		/* IO base address for slave PIC */
 #define PIC_1_COMMAND	PIC_1

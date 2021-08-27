@@ -31,4 +31,6 @@ unsigned char keyboard_scan_code_to_ascii(unsigned char scan_code)
 	};
 
 	return ascii[scan_code];
+
 }
+

@@ -13,6 +13,7 @@
   *
   *  @param num The number of the interrupt
   */
+
 void pic_acknowledge(unsigned int interrupt)
 {
 	if (interrupt < PIC_1_OFFSET || interrupt > PIC_2_END) {
