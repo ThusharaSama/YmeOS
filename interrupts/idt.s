@@ -1,3 +1,4 @@
+
 global  load_idt
 
 ; load_idt - Loads the interrupt descriptor table (IDT).
