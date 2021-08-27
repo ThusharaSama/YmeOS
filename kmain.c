@@ -1,21 +1,23 @@
-    #include "drivers/frame_buffer.h"
-    #include "drivers/serial_port.h"
-    #include "drivers/io.h"
-    #include "segmentation/segments.h"
-    #include "interrupts/interrupts.h"
-    #include "interrupts/keyboard.h"
-    #include "interrupts/pic.h"
-    
+#include "drivers/framebuffer.h"
+#include "drivers/serial_port.h"
+#include "segmentation/memory_segments.h"
+#include "interrupts/keyboard.h"
+#include "interrupts/interrupts.h"
+#include "user_mode/start_program.h"
 
-    void kmain()
-    {
+/*function to intialize interrupts and segments*/
+void init_segments_interrupts(){
+	segments_install_gdt();
+	interrupts_install_idt();
 
-       //char arr[] = "Welcome to YmeOS";
-       //fb_move_cursor(6*80);
-       //fb_write(arr, 20);
-       //serial_write(arr, 20);
-       segments_install_gdt();
-       interrupts_install_idt();
+}
 
-    }
+/*kernal main funcion*/
+void kmain(unsigned int ebx){
+
+	init_segments_interrupts();   //initialize interrunpts and segments
+	run_custom_program(ebx);      //run the user program
+
+
+}
 

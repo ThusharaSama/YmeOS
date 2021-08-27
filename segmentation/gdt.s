@@ -1,3 +1,5 @@
+;Load the Global Descriptor Table
+
 global segments_load_gdt
 global segments_load_registers
 

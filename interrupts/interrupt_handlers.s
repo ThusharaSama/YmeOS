@@ -1,6 +1,5 @@
 ;Generic Interrupt Handler
 ;
-
 extern interrupt_handler
 
 %macro no_error_code_interrupt_handler 1
