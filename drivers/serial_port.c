@@ -1,7 +1,6 @@
 #include "io.h"
 #include "serial_port.h"
  
-  
 enum BaudRate { Baud_115200 = 1, Baud_57600, Baud_19200, Baud_9600 };
 enum BaudRate divisor = Baud_115200;
 

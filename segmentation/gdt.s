@@ -7,6 +7,7 @@ segments_load_gdt:
 	lgdt [esp + 4]
 	ret
 
+
 segments_load_registers:
 	mov ax, 0x10
 	mov ds, ax ; 0x10 - an offset into GDT for the third (kernel data segment) record.
