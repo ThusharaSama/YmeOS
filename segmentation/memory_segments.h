@@ -7,6 +7,8 @@ struct GDT
 	unsigned int address;
 } __attribute__((packed));
 
+
+
 struct GDTDescriptor
 {
 	unsigned short limit_low;
@@ -19,6 +21,9 @@ struct GDTDescriptor
 
 void segments_init_descriptor(int index, unsigned int base_address, unsigned int limit, unsigned char access_byte, unsigned char flags);
 void segments_install_gdt();
+
+
+
 
 // Wrappers around ASM.
 void segments_load_gdt(struct GDT gdt);

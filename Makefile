@@ -1,4 +1,4 @@
-    OBJECTS = loader.o kmain.o drivers/io.o drivers/framebuffer.o drivers/serial_port.o segmentation/gdt.o segmentation/memory_segments.o interrupts/idt.o interrupts/interrupt_handlers.o interrupts/interrupts.o interrupts/keyboard.o interrupts/pic.o user_mode/start_program.o all_paging/paging_enable.o all_paging/paging.o all_paging/kheap.o
+ OBJECTS = loader.o kmain.o drivers/io.o drivers/framebuffer.o drivers/serial_port.o segmentation/gdt.o segmentation/memory_segments.o interrupts/idt.o interrupts/interrupt_handlers.o interrupts/interrupts.o interrupts/keyboard.o interrupts/pic.o user_mode/start_program.o all_paging/paging_enable.o all_paging/paging.o all_paging/kheap.o
 
     CC = gcc
     CFLAGS = -m32 -nostdlib -fno-builtin -fno-stack-protector \

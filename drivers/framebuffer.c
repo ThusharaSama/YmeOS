@@ -3,6 +3,8 @@
 
      char *fb = (char *) 0x000B8000;
      unsigned int writing_state = 800;
+     
+     
      unsigned int cursor_state=400;
     void fb_write_cell(unsigned int i, char c, unsigned char fg, unsigned char bg)
     {
@@ -18,14 +20,16 @@
         outb(FB_DATA_PORT,    pos & 0x00FF);
     }
     
-    int fb_write(char *buf, unsigned int len){
+        int fb_write(char *buf, unsigned int len){
 	    for (unsigned int i=0; i<len;i++){
-	   
+
 	      fb_write_cell((writing_state+(i*2)), *(buf+i), FB_WHITE, FB_GREEN);
-	   	 
+
 	   	 }
 		writing_state+=len*2;
 		cursor_state+=len;
 		fb_move_cursor(cursor_state);
 	   	 return 0;
     }
+    
+    
