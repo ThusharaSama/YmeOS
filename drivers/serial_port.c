@@ -1,6 +1,7 @@
 #include "io.h"
 #include "serial_port.h"
  
+ 
 enum BaudRate { Baud_115200 = 1, Baud_57600, Baud_19200, Baud_9600 };
 enum BaudRate divisor = Baud_115200;
 
@@ -16,7 +17,6 @@ void serial_configure_baud_rate(unsigned short com, unsigned short divisor) {
 void serial_configure_line(unsigned short com) {
 	outb(SERIAL_LINE_COMMAND_PORT(com), 0x03);
 }
-    
     
 void serial_configure_fifo_buffer(unsigned short com) {
 	outb(SERIAL_FIFO_COMMAND_PORT(com), 0xC7);

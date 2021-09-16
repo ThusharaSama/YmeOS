@@ -1,19 +1,6 @@
 #include "../drivers/io.h"
 #include "pic.h"
 
-/*
-        Programmable Interrupt Controller
-	From: http://wiki.osdev.org/PIC
-	Reinitialize the PIC controllers, giving them specified vector offsets
-	rather than 8h and 70h, as configured by default.
-*/
-
-/**
-  *  Acknowledges an interrupt from either PIC 1 or PIC 2.
-  *
-  *  @param num The number of the interrupt
-  */
-
 void pic_acknowledge(unsigned int interrupt)
 {
 	if (interrupt < PIC_1_OFFSET || interrupt > PIC_2_END) {
@@ -49,5 +36,5 @@ void pic_remap(int offset1, int offset2)
 	outb(PIC_1_DATA, 0xFD); // 1111 1101 - Enable IRQ 1 only (keyboard).
 	outb(PIC_2_DATA, 0xFF);
 
-	asm("sti"); // Enable interrupts.
+	asm("sti"); 
 }
