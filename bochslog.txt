@@ -34,6 +34,7 @@
 00000000000i[      ]   Sound support: SB16 ES1370
 00000000000i[      ]   USB support: UHCI OHCI EHCI xHCI
 00000000000i[      ]   VGA extension support: vbe cirrus voodoo
+<<<<<<< HEAD
 00000000000i[MEM0  ] allocated memory at 0x7f837cddb010. after alignment, vector=0x7f837cddc000
 00000000000i[MEM0  ] 32.00MB
 00000000000i[MEM0  ] mem block size = 0x00020000, blocks=256
@@ -80,7 +81,11 @@
 00000000000i[DEV   ] PIIX3 PCI-to-ISA bridge present at device 1, function 0
 00000000000i[PLUGIN] init_dev of 'cmos' plugin device by virtual method
 00000000000i[CMOS  ] Using local time for initial clock
+<<<<<<< HEAD
 00000000000i[CMOS  ] Setting initial clock to: Fri Sep 17 04:03:48 2021 (time0=1631831628)
+=======
+00000000000i[CMOS  ] Setting initial clock to: Mon Sep  6 22:08:31 2021 (time0=1630946311)
+>>>>>>> fdca7bea3b7e7333d53a91b4783c745079715238
 00000000000i[PLUGIN] init_dev of 'dma' plugin device by virtual method
 00000000000i[DMA   ] channel 4 used by cascade
 00000000000i[PLUGIN] init_dev of 'pic' plugin device by virtual method
@@ -267,6 +272,7 @@
 00001914541i[BXVGA ] VBE known Display Interface b0c0
 00001914573i[BXVGA ] VBE known Display Interface b0c5
 00001917216i[VBIOS ] VBE Bios $Id: vbe.c 228 2020-01-02 23:09:02Z vruppert $
+<<<<<<< HEAD
 00005704042i[BIOS  ] IDE time out
 00400947894i[BIOS  ] Booting from 07c0:0000
 00401207754i[BIOS  ] int13_harddisk: function 41, unmapped device for ELDL=80
@@ -292,3 +298,30 @@
 00447706000i[CPU0  ] | CR3=0x00105000 CR4=0x00000000
 00447706000i[CMOS  ] Last time is 1631832075 (Fri Sep 17 04:11:15 2021)
 00447706000i[SIM   ] quit_sim called with exit code 1
+=======
+00005704065i[BIOS  ] IDE time out
+00319188437i[BIOS  ] Booting from 07c0:0000
+00319448297i[BIOS  ] int13_harddisk: function 41, unmapped device for ELDL=80
+00319451974i[BIOS  ] int13_harddisk: function 08, unmapped device for ELDL=80
+00319455636i[BIOS  ] *** int 15h function AX=00c0, BX=0000 not yet supported!
+00385236000p[SDL2  ] >>PANIC<< User requested shutdown.
+00385236000i[CPU0  ] CPU is in protected mode (active)
+00385236000i[CPU0  ] CS.mode = 32 bit
+00385236000i[CPU0  ] SS.mode = 32 bit
+00385236000i[CPU0  ] EFER   = 0x00000000
+00385236000i[CPU0  ] | EAX=00105000  EBX=0002d880  ECX=00104003  EDX=00105000
+00385236000i[CPU0  ] | ESP=00106ffc  EBP=00067ed0  ESI=00054524  EDI=00054525
+00385236000i[CPU0  ] | IOPL=0 id vip vif ac vm rf nt of df IF tf sf zf AF pf cf
+00385236000i[CPU0  ] | SEG sltr(index|ti|rpl)     base    limit G D
+00385236000i[CPU0  ] |  CS:0008( 0001| 0|  0) 00000000 ffffffff 1 1
+00385236000i[CPU0  ] |  DS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00385236000i[CPU0  ] |  SS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00385236000i[CPU0  ] |  ES:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00385236000i[CPU0  ] |  FS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00385236000i[CPU0  ] |  GS:0010( 0002| 0|  0) 00000000 ffffffff 1 1
+00385236000i[CPU0  ] | EIP=00100017 (00100017)
+00385236000i[CPU0  ] | CR0=0xe0000011 CR2=0x00000000
+00385236000i[CPU0  ] | CR3=0x00105000 CR4=0x00000000
+00385236000i[CMOS  ] Last time is 1630946696 (Mon Sep  6 22:14:56 2021)
+00385236000i[SIM   ] quit_sim called with exit code 1
+>>>>>>> fdca7bea3b7e7333d53a91b4783c745079715238

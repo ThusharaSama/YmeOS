@@ -1,5 +1,6 @@
 #include "paging.h"
 #include "../drivers/serial_port.h" 	// pour afficher un msg
+#include "../drivers/serial_port.c"
 
 
 extern void enablePaging(unsigned int*);
@@ -40,6 +41,8 @@ void init_paging() {
 }
 
 void page_fault() {
-char message[]= "Page Fault";
-serial_write(0x3F8,message,sizeof(message));
+
+	char message[]= "Page Fault";
+	serial_write(0x3F8,message,sizeof(message));
+
 }
